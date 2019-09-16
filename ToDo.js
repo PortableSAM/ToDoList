@@ -27,7 +27,6 @@ function paintToDo(text) {
     const delBtn = document.createElement('button');
     const span = document.createElement('span');
     const newId = toDos.length + 1;
-    li.innerHTML = `<input type="checkbox">`;
     delBtn.innerText = 'x';
     delBtn.addEventListener('click', deleteToDo);
     span.innerText = text;
@@ -67,6 +66,7 @@ function loadToDos() {
         });
     }
 }
+
 
 function init() {
     loadToDos();

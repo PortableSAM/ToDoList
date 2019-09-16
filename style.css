@@ -70,6 +70,7 @@ li {
     color: #ffffff;
 }
 
+/*
 a {
     float: right;
     text-align: right;
@@ -77,6 +78,7 @@ a {
     font-size: 1.2em;
     cursor: pointer;
 }
+*/
 
 .delete {
     background-color: #00cec9;
