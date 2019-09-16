@@ -33,7 +33,7 @@ form {
 }
 
 input[type="text"] {
-    width: 320px;
+    width: 386px;
     height: 30px;
     outline: 0;
     border: none;
@@ -63,11 +63,11 @@ ul {
 }
 
 li {
-    border-bottom: 1px solid #4834d4;
+    border-bottom: 1px solid #b71540;
     padding-bottom: 15px;
     padding-top: 15px;
     font-size: 1.3em;
-    color: #535c68;
+    color: #ffffff;
 }
 
 a {

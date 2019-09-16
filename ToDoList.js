@@ -1,38 +1,66 @@
-const eventForm = document.querySelector('.ToDoList');
-const eventInput = document.querySelector('input');
-const eventList = document.querySelector('.tasksBoard');
+const taskForm = document.querySelector('.ToDoList'),
+    taskInput = taskForm.querySelector('input'),
+    tasksList = document.querySelector('.taskList');
 
-const Events_LS = 'events';
+const tasks_LS = 'tasks';
 
-let events = [];
+let tasks = [];
 
-function saveEvents() {
-    localStorage.setItem(Events_LS, JSON.stringify(events));
+function deleteTask(event) {
+    const btn = event.target;
+    const li = btn.parentNode;
+    tasksList.removeChild(li);
+    const cleanTasks = tasks.filter(function (task) {
+        return task.id !== parseInt(li.id);
+    });
+    tasks = cleanTasks;
+    saveTasks();
 }
 
-function paintEvent(task) {
+function saveTasks() {
+    localStorage.setItem(tasks_LS, JSON.stringify(tasks));
+}
+
+function paintTask(text) {
     const li = document.createElement('li');
-    const delBth = document.createElement('button');
+    const delBtn = document.createElement('button');
     const span = document.createElement('span');
-    const newId = events.length + 1;
-    delBth.innerText = 'x';
-    delBth.addEventListener('click', deleteEvent);
+    const newId = tasks.length + 1;
+    delBtn.innerText = 'x';
+    delBtn.addEventListener('click', deleteTask);
     span.innerText = text;
-    li.appendChild(delBth);
+    li.appendChild(delBtn);
     li.appendChild(span);
     li.id = newId;
-    eventList.appendChild(li);
-    const eventObj = {
+    tasksList = appendChild(li);
+    const taskObj = {
         text: text,
         id: newId,
     };
-    eventList.push(eventObj);
-    saveEvents();
+    tasks.push(taskObj);
+    saveTasks();
 }
 
+function handleSubmit(event) {
+    event.preventDefault();
+    const currentValue = taskInput.value;
+    paintTask(currentValue);
+    taskInput.value = '';
+}
+
+function loadTasks() {
+    const loadedTasks = localStorage.getItem(tasks_LS);
+    if (loadedTasks !== null) {
+        const parsedTasks = JSON.parse(loadedTasks);
+        parsedTasks.forEach(function (task) {
+            paintTask(task.text);
+        });
+    }
+}
 
 function init() {
-    loadEvents();
+    loadTasks();
+    taskForm.addEventListener('submit', handleSubmit);
 }
 
 init();
