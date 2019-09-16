@@ -85,7 +85,7 @@ a {
     cursor: pointer;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 520px) {
     .main {
         margin: auto;
         width: 100%;
@@ -96,6 +96,6 @@ a {
     }
 
     button {
-        width: 10%;
+        width: 15%;
     }
 }
