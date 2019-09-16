@@ -51,6 +51,6 @@ function tickTask(e) {
         task.style.color = "#d63031";
     } else {
         task.style.textDecoration = "none";
-        task.style.color = "#ff7675";
+        task.style.color = "#2c3e50";
     }
 }
