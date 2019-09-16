@@ -1,6 +1,6 @@
 html {
     height: 100%;
-    background-image: linear-gradient(#48dbfb, #5f27cd);
+    background-image: linear-gradient(#f6b93b, #eb2f06);
     background-repeat: no-repeat;
     font-family: sans-serif;
     color: #130f40;
@@ -28,7 +28,7 @@ h1 {
 }
 
 form {
-    background-color: #00b894;
+    background-image: linear-gradient(#b71540, #e55039);
     padding: 12px;
 }
 
@@ -51,7 +51,7 @@ button {
 }
 
 .tasksBoard {
-    background-color: #55efc4;
+    background-color: #e55039;
     margin-top: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -73,7 +73,7 @@ li {
 a {
     float: right;
     text-align: right;
-    color: #6c5ce7;
+    color: #fad390;
     font-size: 1.2em;
     cursor: pointer;
 }

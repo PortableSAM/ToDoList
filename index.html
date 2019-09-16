@@ -15,23 +15,15 @@
             <h2>00:00</h2>
         </div>
         <h1>To-Do List</h1>
-        <form class="" action="index.html" method="POST">
-            <input type="text" placeholder="해야하는 일" name="task">
-            <button type="submit">Add</button>
+        <form class="ToDoList">
+            <input type="text" placeholder="해야하는 일">
         </form>
         <div class="tasksBoard">
-            <ul>
-                <!--
-                <li><span class="delete">×</span><input type="checkbox"><label>Vanilla JavaScript</label></li>
-                <li><span class="delete">×</span><input type="checkbox"><label>Vue.js</label></li>
-                <li><span class="delete">×</span><input type="checkbox"><label>React.js</label></li>
-                <li><span class="delete">×</span><input type="checkbox"><label>Node.js</label></li>
-                -->
-            </ul>
+            <ul class="taskList"></ul>
             <a id="clear">Clear</a>
         </div>
     </div>
-    <script type="text/javascript" src="app.js"></script>
+    <script src="ToDoList.js"></script>
     <script src="clock.js"></script>
 </body>
 
