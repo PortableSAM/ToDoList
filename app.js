@@ -4,8 +4,16 @@ function loadEvents() {
     document.querySelector('form').addEventListener('submit', submit);
     document.getElementById('clear').addEventListener('click', clearList);
     document.querySelector('ul').addEventListener('click', deleteOrTick);
+    const loadedEvents = localStorage.getItem(task);
+    if (loadedEvents !== null) {
+        const parsedEvents = JSON.parse(loadedEvents);
+        parsedEvents.forEach(function (task) {
+            addTask(task.text);
+        });
+    }
 }
 
+let task = [];
 
 //submit data function
 function submit(e) {
@@ -53,4 +61,8 @@ function tickTask(e) {
         task.style.textDecoration = "none";
         task.style.color = "#2c3e50";
     }
+}
+
+function saveTask() {
+    localStorage.setItem(addTask, JSON.stringify(task));
 }
