@@ -9,7 +9,7 @@ function getTime() {
     const days = date.getDate();
     const years = date.getFullYear();
     const month = date.getMonth() + 1;
-    clockTitle.innerText = `${days}. ${month}. ${years}, ${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+    clockTitle.innerText = `${days}. ${month}. ${years}, ${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
 }
 
 function init() {
