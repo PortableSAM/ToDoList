@@ -25,33 +25,6 @@ html {
 	top: 0;
 	left: 0;
 }
-.nav {
-	text-align: right;
-}
-.list {
-	margin: 0;
-	font-size: 0;
-}
-.item {
-	display: inline;
-	font-size: 1.5em;
-	text-transform: uppercase;
-}
-
-.item > a:hover {
-	color: #fc427b;
-}
-.item > a {
-	color: wheat;
-	padding: 15px;
-	font-size: 25px;
-	font-family: Nanum pen Script;
-	font-weight: bold;
-	cursor: pointer;
-}
-a {
-	text-decoration: none;
-}
 
 /* content */
 .main {
