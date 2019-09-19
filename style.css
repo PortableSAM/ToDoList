@@ -1,3 +1,9 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html {
 	height: 100%;
 	background-image: linear-gradient(#f6b93b, #eb2f06);
@@ -6,18 +12,21 @@ html {
 	color: #130f40;
 	background-size: auto;
 }
+
 /* header */
 .header {
 	height: 70px;
 	padding: 10px;
 	margin: 0;
 }
+
 .container {
 	max-width: 530px;
 	margin: 0 auto;
 	padding: 0 20px;
 	position: relative;
 }
+
 .clock {
 	margin: 0;
 	display: inline;
@@ -25,6 +34,8 @@ html {
 	top: 0;
 	left: 0;
 }
+
+
 
 /* content */
 .main {
@@ -36,6 +47,8 @@ html {
 }
 
 h2 {
+	font-family: 'Shadows Into Light', Arial, Helvetica, sans-serif;
+	font-weight: bold;
 	text-align: left;
 	color: #2c3e50;
 	margin: auto;
@@ -43,6 +56,7 @@ h2 {
 }
 
 h1 {
+	font-family: 'Lobster', sans-serif;
 	text-align: center;
 	color: #30336b;
 }
@@ -53,6 +67,7 @@ form {
 }
 
 input[type='text'] {
+	font-family: 'Nanum Pen Script', sans-serif;
 	text-align: center;
 	width: 386px;
 	height: 30px;
@@ -97,6 +112,11 @@ li {
 	cursor: pointer;
 }
 
+span {
+	font-family: 'Nanum Pen Script', sans-serif;
+	font-size: 1.5em;
+}
+
 @media (max-width: 520px) {
 	.main {
 		margin: auto;
@@ -110,4 +130,16 @@ li {
 	button {
 		width: 15%;
 	}
+}
+
+/* weather */
+
+.weather {
+	display: inline;
+	position: relative;
+	font-family: 'Shadows Into Light', Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	top: 10px;
+	left: 480px;
 }
