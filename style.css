@@ -134,12 +134,14 @@ span {
 
 /* weather */
 
+.weat {
+	text-align: right;
+}
+
 .weather {
 	display: inline;
-	position: relative;
 	font-family: 'Shadows Into Light', Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	font-size: 1.5em;
-	top: 10px;
-	left: 480px;
+	padding: 10px;
 }
